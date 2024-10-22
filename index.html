@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Układy siatki CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            height: 100vh;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+        .task {
+            background-color: white;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Układy siatki CSS</h1>
+        </div>
+        <div class="main-content">
+            <div class="task">
+                <h2>Zadanie 1: Dwie kolumny</h2>
+                <div style="display: grid; grid-template-columns: 1fr 2fr;">
+                    <div style="background-color: #007BFF; color: white; padding: 10px;">Kolumna lewa</div>
+                    <div style="background-color: #FF6B6B; color: white; padding: 10px;">Kolumna prawa</div>
+                </div>
+            </div>
+            <div class="task">
+                <h2>Zadanie 2: Trzy kolumny</h2>
+                <div style="display: grid; grid-template-columns: 1fr 2fr 1fr;">
+                    <div style="background-color: #4CAF50; color: white; padding: 10px;">Kolumna 1</div>
+                    <div style="background-color: #FFC107; color: black; padding: 10px;">Kolumna 2</div>
+                    <div style="background-color: #FF5722; color: white; padding: 10px;">Kolumna 3</div>
+                </div>
+            </div>
+            <div class="task">
+                <h2>Zadanie 3: Automatyczna wysokość</h2>
+                <div style="display: grid; grid-template-rows: auto 1fr auto;">
+                    <div style="background-color: #007BFF; color: white; padding: 10px;">Nagłówek</div>
+                    <div style="background-color: #F1F1F1; padding: 10px;">Treść główna</div>
+                    <div style="background-color: #FF6B6B; color: white; padding: 10px;">Stopka</div>
+                </div>
+            </div>
+            <div class="task">
+                <h2>Zadanie 4: Procentowe kolumny</h2>
+                <div style="display: grid; grid-template-columns: 30% 70%;">
+                    <div style="background-color: #007BFF; color: white; padding: 10px;">Lewa kolumna</div>
+                    <div style="background-color: #FF6B6B; color: white; padding: 10px;">Prawa kolumna</div>
+                </div>
+            </div>
+            <div class="task">
+                <h2>Zadanie 5: Cztery elementy</h2>
+                <div style="display: grid; grid-template-rows: auto 1fr auto; grid-template-columns: 70% 30%;">
+                    <div style="grid-column: 1 / -1; background-color: #007BFF; color: white; padding: 10px;">Nagłówek</div>
+                    <div style="background-color: #F1F1F1; padding: 10px;">Główna treść</div>
+                    <div style="background-color: #4CAF50; color: white; padding: 10px;">Panel boczny</div>
+                    <div style="grid-column: 1 / -1; background-color: #FF6B6B; color: white; padding: 10px;">Stopka</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            &copy; 2024 Układy CSS Grid
+        </div>
+    </div>
+</body>
+</html>
